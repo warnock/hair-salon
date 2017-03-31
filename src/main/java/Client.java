@@ -18,4 +18,15 @@ public class Client {
     return name;
   }
 
+  public String getAddress() {
+    return address;
+  }
+
+  public String getPhone() {
+    return "";
+  }
+
+  public int getStylistId() {
+    return 0;
+  }
 }
