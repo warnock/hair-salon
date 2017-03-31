@@ -88,4 +88,24 @@ public class Client {
       .executeUpdate();
     }
   }
+
+  public void updateName(String name) {
+    try(Connection con= DB.sql2o.open()) {
+      String sql = "UPDATE clients SET name=:name WHERE id=:id";
+      con.createQuery(sql)
+      .addParameter("name", name)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
+
+  public void updateAddress(String address) {
+    try(Connection con= DB.sql2o.open()) {
+      String sql = "UPDATE clients SET address=:address WHERE id=:id";
+      con.createQuery(sql)
+      .addParameter("address", address)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
 }

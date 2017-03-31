@@ -106,4 +106,22 @@ public class ClientTest {
     assertEquals(null, Client.find(myClient.getId()));
   }
 
+  @Test
+  public void updateName_updatesName_true() {
+    Client myClient = new Client("Phill", "5th ave", "222-222-2222", 1);
+    myClient.save();
+    myClient.updateName("Abe");
+    assertEquals("Abe", myClient.find(myClient.getId()).getName());
+  }
+
+  @Test
+  public void updateAddress_updatesAddress_true() {
+    Client myClient = new Client("Phill", "5th ave", "222-222-2222", 1);
+    myClient.save();
+    myClient.updateAddress("16th ave");
+    assertEquals("16th ave", myClient.find(myClient.getId()).getAddress());
+  }
+
+
+
 }
