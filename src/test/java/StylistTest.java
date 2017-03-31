@@ -79,4 +79,27 @@ public class StylistTest {
     assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
   }
 
+  @Test
+  public void delete_deletesStylist_true() {
+    Stylist myStylist = new Stylist("Bob");
+    myStylist.save();
+    myStylist.delete();
+    assertEquals(null, Stylist.find(myStylist.getId()));
+  }
+
+
+
+
+  // @Test
+  // public void getClient_returnsAllClientsFromDataBase_clientList() {
+  //   Stylist newStylist = new Stylist("Bob");
+  //   newStylist.save();
+  //   Client firstClient = new Client("Phill", "5th ave", "222-222-2222", newStylist.getId());
+  //   firstClient.save();
+  //   Client secondClient = new Client("Abe", "6th ave", "509-222-2222", newStylist.getId());
+  //   secondClient.save();
+  //   Client[] clients = new Client[] {firstClient, secondClient};
+  //   assertTrue(newStylist.getClient().containsAll(Arrays.asList(clients)));
+  // }
+
 }
