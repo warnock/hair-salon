@@ -37,4 +37,10 @@ public class ClientTest {
     assertEquals("5th ave", newClient.getAddress());
   }
 
+  @Test
+  public void getPhone_returnsInstanceOfPhone_true() {
+    Client newClient = new Client("Phill", "5th ave", "222-222-2222", 1);
+    assertEquals("222-222-2222", newClient.getPhone());
+  }
+
 }

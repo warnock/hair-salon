@@ -23,7 +23,7 @@ public class Client {
   }
 
   public String getPhone() {
-    return "";
+    return phone;
   }
 
   public int getStylistId() {
