@@ -25,4 +25,10 @@ public class ClientTest {
     assertEquals(true, newClient instanceof Client);
   }
 
+  @Test
+  public void getName_returnsInstanceOfName_true() {
+    Client newClient = new Client("Phill", "5th ave", "222-222-2222", 1);
+    assertEquals("Phill", newClient.getName());
+  }
+
 }

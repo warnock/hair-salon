@@ -14,4 +14,8 @@ public class Client {
     this.stylist_id = stylist_id;
   }
 
+  public String getName() {
+    return name;
+  }
+
 }
