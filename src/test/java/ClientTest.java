@@ -122,6 +122,14 @@ public class ClientTest {
     assertEquals("16th ave", myClient.find(myClient.getId()).getAddress());
   }
 
+  @Test
+  public void updatePhone_updatesPhone_true() {
+    Client myClient = new Client("Phill", "5th ave", "222-222-2222", 1);
+    myClient.save();
+    myClient.updatePhone("509-222-2222");
+    assertEquals("509-222-2222", myClient.find(myClient.getId()).getPhone());
+  }
+
 
 
 }

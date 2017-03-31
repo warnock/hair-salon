@@ -108,4 +108,14 @@ public class Client {
       .executeUpdate();
     }
   }
+
+  public void updatePhone(String phone) {
+    try(Connection con= DB.sql2o.open()) {
+      String sql = "UPDATE clients SET phone=:phone WHERE id=:id";
+      con.createQuery(sql)
+      .addParameter("phone", phone)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
 }
