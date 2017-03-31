@@ -37,6 +37,6 @@ To run application:
 
 ### License
 
-Copyright (c) 2017 **_Megan and Megan Warnock_**
+Copyright (c) 2017 **_Megan Warnock_**
 
 This software is licensed under the MIT license.
