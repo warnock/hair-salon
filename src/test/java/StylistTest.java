@@ -17,4 +17,10 @@ public class StylistTest {
     }
   }
 
+  @Test
+  public void Stylist_returnsInstanceOfStylist_true() {
+    Stylist newStylist = new Stylist("Bob");
+    assertEquals(true, newStylist instanceof Stylist);
+  }
+
 }

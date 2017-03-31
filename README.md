@@ -28,7 +28,7 @@ _Clone the repository_
 In PSQL: CREATE DATABASE hair_salon
 * switch to database: \c hair_salon
 * CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
-* CREAT TABLE clients (id serial PRIMARY KEY, name varchar, address varchar, number varchar);
+* CREAT TABLE clients (id serial PRIMARY KEY, name varchar, address varchar, phone varchar, stylist_id int);
 
 To run application:
 * _Run the command 'gradle run'_
