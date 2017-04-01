@@ -7,6 +7,16 @@
     #end
 </ul>
 
-<a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
-<a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
+<h4>Edit Stylist Name</h4>
+<form  action="/stylists/$stylists.getId()" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" value="$stylists.getName()" class="form-control">
+  </div>
+  <button type="sumbit" name="button" class="btn-success btn">Update</button>
+</form>
+
+<a href="/stylists/$stylists.getId()/clients/$client.getId()"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
+<button type="sumbit" name="button" class="btn-success btn">Delete Stylist</button>
+
 <!-- stylist.vtl -->
