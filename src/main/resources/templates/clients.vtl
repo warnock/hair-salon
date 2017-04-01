@@ -1,3 +1,10 @@
 <!-- clients.vtl -->
-<h2>I am at the list of all clients!>
+<h2>All clients</h2>
+
+
+      <ul>
+        #foreach($client in $clients)
+            <li><a href="/stylist/$stylist.getId()/clients/$client.getId()">$client.getName()</li></a>
+        #end
+      </ul>
 <!-- clients.vtl -->

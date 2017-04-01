@@ -1,6 +1,12 @@
 <!-- stylist.vtl -->
 <h3>$stylists.getName()</h3>
 
+<ul>
+  #foreach($client in $stylists.getClients())
+      <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</li></a>
+    #end
+</ul>
 
+<a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
 <a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
 <!-- stylist.vtl -->
