@@ -18,6 +18,10 @@ _Example text for the description of the project_
 | The application will recognize more than one client | ClientOne, ClientTwo | Phill, Abe|
 | The application will return a list of all stylist | StylistOne, StylistTwo, StylistThree | Clair, Bob, Laquisha|
 | The application will return a list of all clients | ClientOne, ClientTwo, ClientThree | Phill, Abe, Megan|
+| The application will be able to delete instances stylists | StylistTwo | null |
+| The application will be able to update stylists name | Bob | Bill |
+| The application will be able to delete instances of clients | Phill | null |
+| The application will be able to update clients information | Abe, 5th st, 333-333-3333 | Abraham, 6th st, 222-333-3333 |
 
 
 
