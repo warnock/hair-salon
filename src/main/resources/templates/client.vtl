@@ -1,0 +1,26 @@
+<!-- client -->
+<h3>$client.getName()</h3>
+<ul>
+  <li>Address: $client.getAddress()</li>
+  <li>Phone: $client.getPhone()</li>
+</ul>
+
+<h4>Edit client information</h4>
+<form  action="/stylists/$stylists.getId()/clients/$client.getId()" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" value="$client.getName()" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input id="address" name="address" type="text" value="$client.getAddress()" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="text" value="$client.getPhone()" class="form-control">
+  </div>
+  <button type="sumbit" name="button" class="btn">Update</button>
+</form>
+
+<form action="/clients/$client.getId()/delete" method="post"><button type="sumbit" name="button" class="btn-success btn">Delete Client</button></form>
+<!-- client -->

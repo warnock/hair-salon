@@ -3,7 +3,7 @@
 
 <ul>
   #foreach($client in $stylists.getClients())
-      <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</li></a>
+      <li><a href="/stylists/$stylists.getId()/clients/$client.getId()">$client.getName()</li></a>
     #end
 </ul>
 
@@ -16,7 +16,7 @@
   <button type="sumbit" name="button" class="btn">Update</button>
 </form>
 
-<a href="/stylists/$stylists.getId()/clients/$client.getId()"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
+<a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
 <form action="/stylists/$stylists.getId()/delete" method="post"><button type="sumbit" name="button" class="btn-success btn">Delete Stylist</button></form>
 
 <!-- stylist.vtl -->

@@ -92,7 +92,7 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    //deltet stylist
+    //delete stylist
     post("/stylists/:stylist_id/delete", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Stylist stylist = Stylist.find(Integer.parseInt(request.params("stylist_id")));
@@ -102,7 +102,38 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    get("/stylists/:stylist_id/clients/:client_id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Stylist stylist = Stylist.find(Integer.parseInt(request.params(":stylist_id")));
+      model.put("stylist", stylist);
+      Client client = Client.find(Integer.parseInt(request.params(":client_id")));
+      model.put("client", client);
+      model.put("template", "templates/client.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
+    //client detail
+    get("/clients/:client_id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Client client = Client.find(Integer.parseInt(request.params(":client_id")));
+      model.put("client", client);
+      model.put("template", "templates/client.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    //update client
+    post("/stylists/:stylists_id/clients/:client_id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Client client = Client.find(Integer.parseInt(request.params(":client_id")));
+      Stylist stylist = Stylist.find(client.getStylistId());
+      client.updateName(request.queryParams("name"));
+      client.updateAddress(request.queryParams("address"));
+      client.updatePhone(request.queryParams("phone"));
+      model.put("client", client);
+      String url = String.format("/stylists/%d/clients/%d", stylist.getId(), client.getId() );
+      response.redirect(url);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
   }
 }
