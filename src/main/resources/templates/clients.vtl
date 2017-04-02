@@ -1,10 +1,5 @@
 <!-- clients.vtl -->
 <h2>All clients</h2>
-
-
-#foreach($stylist in $stylists)
-  <ul>
-    <li><a href="/stylists/$stylists.getId()">$stylist.getName()</a>
       <ul>
         #foreach($client in $stylist.getClients())
           #if ($stylists.getId() == $client.getLocationId())
@@ -12,7 +7,5 @@
           #end
         #end
       </ul>
-    </li>
-  </ul>
-#end
+
 <!-- clients.vtl -->

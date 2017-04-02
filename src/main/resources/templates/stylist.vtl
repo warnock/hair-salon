@@ -1,6 +1,7 @@
 <!-- stylist.vtl -->
-<h3>$stylists.getName()</h3>
+<h3>Stylist's Name: <em>$stylists.getName()</em></h3>
 
+<p>Clients of $stylists.getName():</p>
 <ul>
   #foreach($client in $stylists.getClients())
       <li><a href="/stylists/$stylists.getId()/clients/$client.getId()">$client.getName()</li></a>

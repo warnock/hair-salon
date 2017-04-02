@@ -1,11 +1,12 @@
 <!-- client -->
-<h3>$client.getName()</h3>
+<h3 class="centerText">Client Information</h3>
+<h4>Name: $client.getName()</h4>
 <ul>
   <li>Address: $client.getAddress()</li>
   <li>Phone: $client.getPhone()</li>
 </ul>
 
-<h4>Edit client information</h4>
+<h5>Edit client information</h5>
 <form  action="/stylists/$stylists.getId()/clients/$client.getId()" method="post">
   <div class="form-group">
     <label for="name">Name</label>
