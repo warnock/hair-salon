@@ -14,10 +14,10 @@
     <label for="name">Name</label>
     <input id="name" name="name" type="text" value="$stylists.getName()" class="form-control">
   </div>
-  <button type="sumbit" name="button" class="btn">Update</button>
+  <button type="sumbit" name="button" class="btn btn-from button-default">Update</button>
 </form>
 
 <a href="/stylists/$stylists.getId()/clients/new"><button type="button" name="button" class="btn-success btn">Add Client</button></a>
-<form action="/stylists/$stylists.getId()/delete" method="post"><button type="sumbit" name="button" class="btn-success btn">Delete Stylist</button></form>
+<form action="/stylists/$stylists.getId()/delete" method="post"><button type="sumbit" name="button" class="btn-danger btn">Delete Stylist</button></form>
 
 <!-- stylist.vtl -->

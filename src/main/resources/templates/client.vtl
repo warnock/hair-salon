@@ -1,27 +1,30 @@
 <!-- client -->
-<h3 class="centerText">Client Information</h3>
-<h4>Name: $client.getName()</h4>
-<ul>
-  <li>Address: $client.getAddress()</li>
-  <li>Phone: $client.getPhone()</li>
-</ul>
+<div class="panel panel-default">
+  <div class="panel-heading centerText"><h3>Client Information</h3></div>
+  <div class="panel-body">
+  <h4>Name: $client.getName()</h4>
+  <ul>
+    <li>Address: $client.getAddress()</li>
+    <li>Phone: $client.getPhone()</li>
+  </ul>
 
-<h5>Edit client information</h5>
-<form  action="/stylists/$stylists.getId()/clients/$client.getId()" method="post">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" value="$client.getName()" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input id="address" name="address" type="text" value="$client.getAddress()" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone</label>
-    <input id="phone" name="phone" type="text" value="$client.getPhone()" class="form-control">
-  </div>
-  <button type="sumbit" name="button" class="btn">Update</button>
-</form>
+  <h5>Edit client information</h5>
+  <form  action="/stylists/$stylists.getId()/clients/$client.getId()" method="post">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" value="$client.getName()" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input id="address" name="address" type="text" value="$client.getAddress()" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="text" value="$client.getPhone()" class="form-control">
+    </div>
+    <button type="sumbit" name="button" class="btn btn-from">Update</button>
+  </form>
 
-<form action="/clients/$client.getId()/delete" method="post"><button type="sumbit" name="button" class="btn-success btn">Delete Client</button></form>
+  <form action="/clients/$client.getId()/delete" method="post"><button type="sumbit" name="button" class="button-margin btn btn-danger">Delete Client</button></form>
+</div>
 <!-- client -->

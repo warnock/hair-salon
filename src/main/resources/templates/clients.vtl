@@ -1,11 +1,26 @@
 <!-- clients.vtl -->
-<h2>All clients</h2>
-      <ul>
-        #foreach($client in $stylist.getClients())
-          #if ($stylists.getId() == $client.getLocationId())
-            <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</li></a>
-          #end
-        #end
-      </ul>
+<div class="panel panel-default">
+  <div class="panel-heading"><h2>All clients</h2></div>
+  <div class="panel-body">
+    <!-- #foreach($stylist in $stylists) -->
+      <!-- <ul>
+        <li><a href="/stylists/$stylists.getId()">$stylist.getName()</a> -->
+          <ul>
+            #foreach($client in $stylist.getClients())
+              #if ($stylists.getId() == $client.getLocationId())
+                <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</li></a>
+              #end
+            #end
+          </ul>
+        <!-- </li>
+      </ul> -->
+    <!-- #end -->
+
+
+
+  </div>
+</div>
+
+
 
 <!-- clients.vtl -->

@@ -5,3 +5,11 @@
 .centerText {
   text-align: center;
 }
+
+.btn-from {
+  width: 100%;
+}
+
+.button-margin {
+  margin-top: 20px;
+}
